@@ -1,0 +1,24 @@
+version: "3.8"
+
+services:
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+  backend:
+    build: ./backend
+    environment:
+      - INSTANCE_LIST=/data/instances.json
+    volumes:
+      - ./data:/data
+    ports:
+      - "4000:3000"
+
+  updater:
+    build: ./updater
+    volumes:
+      - ./data:/data
+    entrypoint: ["cron", "-f"]

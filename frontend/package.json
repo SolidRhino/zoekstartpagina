@@ -1,0 +1,16 @@
+{
+  "name": "zoekstartpagina-frontend",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "svelte": "^3.0.0"
+  },
+  "devDependencies": {
+    "@sveltejs/kit": "latest",
+    "vite": "^4.0.0"
+  }
+}
